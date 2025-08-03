@@ -1,0 +1,113 @@
+ body {
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://media.istockphoto.com/id/168386317/photo/architecture-blueprint.jpg?s=1024x1024&w=is&k=20&c=8sW6llUtAwi2pTA77Hyo8QjBv1NHyCr5df7RJjGI48U=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional: makes background fixed on scroll */
+    font-family: Arial, sans-serif;
+    color: black;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(175, 194, 248, 0.9); /* Optional: semi-transparent white bg for readability */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ccc;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #222;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .profile-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .profile-nav a {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-weight 0.3s ease;
+    user-select: none;
+  }
+  .profile-nav a:hover {
+    background-color: #e0e0e0;
+  }
+  .profile-nav a.active {
+    background-color: #d0d0d0;
+    font-weight: bold;
+  }
+  .info {
+  position: relative;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: visible; /* check that no overflow:hidden clips it */
+}
+
+
+  .info > .placeholder,
+  .info > section {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.98);
+    min-height: 150px;
+    margin: 0;
+  }
+  .info > section {
+    display: none;
+  }
+  .info > section:target {
+    display: block;
+  }
+  .info > .placeholder {
+    display: block;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+  }
+  footer {
+    margin-top: 40px;
+    background-color: rgba(175, 194, 248, 0.9); 
+    border-top: 1px solid #ccc;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+  }
+  footer p {
+    margin: 5px 0;
+  }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Profile</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="profile-header">
+    <img src="WhatsApp Image 2025-08-03 at 5.11.51 PM.jpeg" alt="Profile Photo" class="profile-photo" />
+    <div class="profile-name">Brian Kimutai</div>
+    <p>Electrical and Electronics Engineer</p>
+  </div>
+  <nav class="profile-nav" role="tablist" aria-label="Profile sections">
+    <a href="#about" role="tab" id="tab-about-link">About</a>
+    <a href="#education" role="tab" id="tab-education-link">Education</a>
+    <a href="#skills" role="tab" id="tab-skills-link">Skills</a>
+    <a href="#projects" role="tab" id="tab-projects-link">Projects</a>
+    <a href="#work" role="tab" id="tab-work-link">Work Experience</a>
+    <a href="#certification" role="tab" id="tab-certification-link">Certification</a>
+  </nav>
+
+  <div class="info" role="tabpanel" style="margin-bottom: 36px;">
+    
+    <div class="placeholder" id="placeholder-message">
+      Please select a section to view its content.
+    </div>
+    
+    <section id="about" tabindex="0" aria-labelledby="tab-about-link">
+          <h2>About Me</h2>
+          <p>Highly skilled and motivated Electrical and Electronics Engineer with expertise in electrical systems design, installation, and maintenance. Proficient in computer programming, data science, and analysis. Seeking challenging opportunities to apply my knowledge and skills for innovative solutions.</p>
+    </section>
+
+    <section id="education" tabindex="0" aria-labelledby="tab-education-link">
+              <h2>Education</h2>
+              <ul>
+                <li>2018 — 2023: Bachelor of Science in Electrical and Electronics Engineering(Second Class Upper 
+                  Division) University of Nairobi, Kenya </li>
+                <li>2014-2017: Kakamega School, Kakamega ( KCSE, A-)  </li>
+              </ul>
+      </section>
+
+      <section id="skills" tabindex="0" aria-labelledby="tab-skills-link">
+      <h2>Skills</h2>
+      <ul>
+        <li>Electrical Systems Design, Installation, and Maintenance - Electrical motor installation, control 
+circuit and maintenance   </li>
+        <li>Computer Programming: Python, C++, html, CSS   </li>
+        <li>Data Science and Analysis</li>
+        <li>MATLAB Analysis </li>
+      </ul>
+    </section>
+
+    <section id="projects" tabindex="0" aria-labelledby="tab-projects-link">
+              <h2>Projects</h2>
+              <p>Worked on various projects including:</p>
+              <ul>
+                <li>Big Data for Economic Environmental Decision Making Model for Solar Energy 
+                      Utilization (Final year project)  </li>
+                <li> Solar Powered Oxygen Concentrator (Team work)</li>
+                <li>DC Power Supply Charger (Team work) </li>
+              </ul>
+    </section>
+
+    <section id="work" tabindex="0" aria-labelledby="tab-work-link">
+      <h2>Work Experience</h2>
+      <p> Unitech Industrial Trading (Intern) 16/10/2023 --- Current </p>
+      <p> Ekaterra Tea Kenya Plc (Attachment) 07/06/2022— 07/09/202  </p>
+    </section>
+
+    <section id="certification" tabindex="0" aria-labelledby="tab-certification-link">
+      <h2>Certification</h2>
+      <p>Completed training in Wi-Fi over Wireless Base Station offered by University of Nairobi in partnership 
+         with Royal Academy of Engineering  </p>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <p><strong>Contact Details:</strong></p>
+  <p>Email: briankodii8@gmail.com</p>
+  <p>Phone: +254790854280</p>
+  <p>Address: 00100, NAIROBI, KENYA</p>
+</footer>
+
+<script>
+  // Prevent jumping and update active tab styling
+  document.querySelectorAll('.profile-nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const hash = link.getAttribute('href');
+      // Update URL hash without jumping
+      history.pushState(null, null, hash);
+
+      // Show the targeted section and hide placeholder
+      const targetSection = document.querySelector(hash);
+      const placeholder = document.getElementById('placeholder-message');
+
+      document.querySelectorAll('.info > section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+
+      if (targetSection) {
+        targetSection.style.display = 'block';
+        targetSection.focus();
+        placeholder.style.display = 'none';
+      } else {
+        placeholder.style.display = 'block';
+      }
+      // Manage active state
+      document.querySelectorAll('.profile-nav a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // On page load: no content shown, placeholder visible, no active tab
+  window.addEventListener('DOMContentLoaded', () => {
+    const placeholder = document.getElementById('placeholder-message');
+    placeholder.style.display = 'block';
+
+    document.querySelectorAll('.info > section').forEach(sec => {
+      sec.style.display = 'none';
+    });
+
+    document.querySelectorAll('.profile-nav a').forEach(a => a.classList.remove('active'));
+  });
+</script>
+
+</body>
+</html>
