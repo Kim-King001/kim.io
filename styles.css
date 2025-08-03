@@ -111,3 +111,56 @@
   footer p {
     margin: 5px 0;
   }
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      .profile-nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .profile-nav a {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        font-size: 15px;
+      }
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+      .profile-name {
+        font-size: 1.5rem;
+      }
+      .info > section,
+      .info > .placeholder {
+        padding: 15px;
+        min-height: 160px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        padding: 15px;
+      }
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+      .profile-name {
+        font-size: 1.3rem;
+      }
+      .profile-nav a {
+        font-size: 14px;
+      }
+      .info > section,
+      .info > .placeholder {
+        padding: 10px;
+        min-height: 140px;
+      }
+      footer {
+        font-size: 13px;
+        padding: 10px 15px;
+      }
+    }
