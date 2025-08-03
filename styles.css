@@ -41,25 +41,29 @@
     text-align: center;
   }
   .profile-nav {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  .profile-nav a {
-    flex: 1;
-    margin: 0 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    transition: background-color 0.3s ease, font-weight 0.3s ease;
-    user-select: none;
-  }
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .profile-nav a {
+      flex: 1 1 120px;
+      min-width: 100px;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: white;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      transition: background-color 0.3s ease, font-weight 0.3s ease;
+      user-select: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
   .profile-nav a:hover {
     background-color: #e0e0e0;
   }
